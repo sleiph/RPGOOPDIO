@@ -7,11 +7,17 @@ namespace RPGOOPDIO
     {
         static void Main(string[] args)
         {
-            Personagem arus = new Personagem(
-                "Arus", 42, "Guerreiro"
-            );
+            Personagem arus = new Personagem("Arus", 42);
+            arus.HeroType = new Guerreiro();
 
-            Console.WriteLine(arus.ToString());
+            Personagem sura = new Personagem("Sura", 43);
+            sura.HeroType = new Vermelho();
+
+            Console.WriteLine(arus);
+            Console.WriteLine(sura);
+
+            Console.WriteLine(arus.Ataque(4));
+            Console.WriteLine(sura.Ataque(8));
         }
     }
 }
